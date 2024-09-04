@@ -32,6 +32,9 @@ int main(){
     return 0;
 }
 
+
+
 float calVol(float a=2, float b=2){
-    return M_PI * pow(a,2) * b;
+    float volume = M_PI * pow(a,2) * b;
+    return volume;
 }
