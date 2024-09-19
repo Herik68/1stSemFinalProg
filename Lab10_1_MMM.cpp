@@ -76,17 +76,24 @@ int median(int a[], int asize){//calculate median
 }
 
 //Mode
-int mode(int a[], int asize){
-	int freq[asize]={};
-	int modeNum,most=0;
+int mode(int a[], int asize){\
+	//In this condition, the array is already sorted from left to right as we call bubblesort() in median func
+	//So, the lowest number at the start and highest number at the end of the array
 
+	int minValue=a[0],//set the minvalue to lowest num which is the start point of array
+		maxValue=a[asize-1],//we already have an arraysize, then to get the last num of array, it is asize-1
+
+		freq[maxValue+1]={};// need to +1 as our freq arraysize have to contain 0-to-our maxnum
+
+	int modeNum,most=0;//Remember how we find the biggest num at the beginning, it is the same
+	
 	//get the frequencies for each num
 	for(int i=0;i<asize;i++){
 		freq[a[i]]++;
 	}
 
 	//if the frequency of a number greater than our most occurence num(most)
-	for(int i=0;i<asize;i++){
+	for(int i=minValue;i<=maxValue;i++){
 		if(freq[i]>most){
 			most=freq[i];//replace most by the frequency of this number
 			modeNum=i; // assign this num as mode
