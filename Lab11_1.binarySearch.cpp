@@ -90,14 +90,14 @@ int binarySearch(int x[], int xsize, int key, int collect[], int& freq) {
             
             // left num
             int left = middle - 1;
-            while (x[left] == key) {
+            while (x[left] == key && left>=0) {
                 collect[freq++] = left;
                 left--;
             }
             
             // right num
             int right = middle + 1;
-            while ( x[right] == key) {
+            while ( x[right] == key && right<xsize) {
                 collect[freq++] = right;
                 right++;
             }
