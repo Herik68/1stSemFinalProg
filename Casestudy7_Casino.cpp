@@ -9,7 +9,7 @@ int main(){
     srand(time(0));
     int sum,point,gamestatus;
     cout<<"Press enter to roll"<<endl;
-    cin.get();
+    cin.get();// ask the user to touch a key to continue
     sum=rolldice();
     
 

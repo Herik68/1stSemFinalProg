@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int c[5],search,count=0;
+    int c[10],search,count=0;
     cout<<"Enter 10 values: ";
     for(int i=0;i<10;i++){
             cin>>c[i];
@@ -16,6 +16,7 @@ int main(){
     cout<<"Enter value to find: ";
     cin>> search;
 
+    //this one is a linear search
     for(int i=0;i<10;i++){
         if(c[i]==search){
             count++;

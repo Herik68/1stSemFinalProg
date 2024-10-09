@@ -24,10 +24,10 @@ int main(){
 }
 
 int fibonacci(int y){
-    if(y<=1){
+    if(y<=1){// if y=0 or 1 , give back the original value 0 and 1
         return y;
     }
     else{
-        return fibonacci(y-1)+fibonacci(y-2);
+        return fibonacci(y-1)+fibonacci(y-2);// start calculationg from 2=1+0
     }
 }

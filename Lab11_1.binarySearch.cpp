@@ -45,8 +45,8 @@ int main() {
     cin >> key;
     binarySearch(a, asize, key, collect, freq);
 
-    if (freq > 0) {
-        bubblesort(collect,freq);
+    if (freq > 0) {//if freq is zero as the origianl, this number is not in the array
+        bubblesort(collect,freq);// the result should be sorted again
         cout << key << " is found at sorted index: ";
         for (int i = 0; i < freq; i++) {
             cout << collect[i] << " ";
@@ -78,7 +78,7 @@ void bubblesort(int x[], int xsize) {
 }
 
 //Search
-int binarySearch(int x[], int xsize, int key, int collect[], int& freq) {
+int binarySearch(int x[], int xsize, int key, int collect[], int& freq) {//We passed the freq by reference here as we need to change the original freq
     int middle, low = 0, high = xsize - 1;
 
     while (low <= high) {
@@ -86,8 +86,9 @@ int binarySearch(int x[], int xsize, int key, int collect[], int& freq) {
         
         if (x[middle] == key) {
             // add freq for printing result
-            collect[freq++] = middle;
-            
+            collect[freq++] = middle;//if we found a number set it freq to 1,
+                                    // if the number is found again and again, the freq will be 2,3,....
+            //After we get our wanted num as the middlenum, we will check its left and right to make sure if they are the same
             // left num
             int left = middle - 1;
             while (x[left] == key && left>=0) {

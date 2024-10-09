@@ -16,22 +16,22 @@ int main(){
         cout<<"How much is "<< a<< " times "<<b<< " (-1 to End)? ";
         cin>> x;
         
-        int correctans= a * b;
+        int correctans= a * b;// calculate the result and store it to check later with user calculation input
         
         if(x==-1){
             cout<<"That's all for now. Bye.";
         } 
         else if(x!=correctans){
-            while(x!=correctans){
+            while(x!=correctans){//ask again and again the user calculation is correct
             cout<< " No.Try again. \n"<< a <<" times "<<b<<" is ? ";
             cin>>x;
-            if(x==-1){
+            if(x==-1){// but if the user wants to quit, it should be able to stop
                 cout<<"That's all for now. Bye.";
                 break;
             }
-            }cout<<"Very good"<<endl;
+            }cout<<"Very good"<<endl;//print this outside of the while loop which means the result is finally correct
         }
-        else{
+        else{// if the user calculation is already correct at first try
             cout<<"Very good"<<endl;
         }
         

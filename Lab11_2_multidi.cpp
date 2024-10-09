@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
-const int students=3,exams=4;//arraySizes
-int minimum(int [][exams],int ,int );
+const int students=3,exams=4;//arraySizes declared before the main 
+                            // as we need to use the variable exams in the function prototype
+int minimum(int [][exams],int ,int );// the second [](columnname) must be included
 int maximum(int [][exams],int ,int );
 double average(int[],int);
 int main(){
@@ -25,7 +26,7 @@ int minimum(int grades[][exams],int students,int exams){
     int lowest;
     for(int i=0;i<students;i++){
         for(int j=0;j<exams;j++)
-        if((i==0 && j==0) || grades[i][j]<lowest){
+        if((i==0 && j==0) || grades[i][j]<lowest){//make the first num lowest and set everything lower than it to lowest
             lowest=grades[i][j];
         }
     }
@@ -34,10 +35,10 @@ int minimum(int grades[][exams],int students,int exams){
 
 //Maximum
 int maximum(int grades[][exams],int students,int exams){
-    int highest=0;
+    int highest;
     for(int i=0;i<students;i++){
         for(int j=0;j<exams;j++)
-        if(grades[i][j]>highest){
+        if((i==0 && j==0)||grades[i][j]>highest){//make the first num highest and set everything higher than it to highest
             highest=grades[i][j];
         }
     }

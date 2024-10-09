@@ -10,7 +10,7 @@ int main(){
     int face;
     for(int i=0;i<6000;i++){
         face=rand()%6;
-        frequency[face]++;
+        frequency[face]++;//freqency[1]+++ | frequency[2]++ | etc
     }
     cout<<setw(8)<<"Face"<<setw(13)<<"Frequency"<<endl;
     for(int i=1;i<=6;i++){

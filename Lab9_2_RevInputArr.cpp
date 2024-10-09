@@ -6,9 +6,9 @@ int main(){
     for(int inputcount=0;inputcount<5;inputcount++){
             int x,index;
             cout<<"Enter a number: ";
-            cin>>x;
+            cin>>x;//store the num value
             cout<<"Enter index: ";
-            cin>>index;
+            cin>>index;//store the num index
             userc[index]=x;
     }
     cout<<"User array elements: ";

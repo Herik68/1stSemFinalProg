@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 void tripleCallByValue(int );
-void tripleCallByReference(int &);
+void tripleCallByReference(int &);// & = pass by reference
 
 int main(){
     int x;
@@ -26,7 +26,6 @@ void tripleCallByValue(int a){
     cout<< "Value returned from tripleCallByValue() is : "<<y<<endl;
 }
 
-void tripleCallByReference(int &a){
-    int &y=a;
-    y=a*3;
+void tripleCallByReference(int &a){//&a
+    a*=3;
 }

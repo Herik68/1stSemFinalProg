@@ -20,7 +20,7 @@ int main(){
 		5,6,7,2,5,3,9,4,6,4,
 		7,8,9,6,8,7,8,9,7,8,
 		7,4,4,2,5,3,8,7,5,6,
-		4,5,6,1,6,5,7,8,7  };
+		4,5,6,1,5,6,7,8,7  };
 
 	cout << "Mean = " << fixed << setprecision(2) << mean(respose, responseSize) << endl;
 	cout << "Median = " << median(respose, responseSize) << endl;
